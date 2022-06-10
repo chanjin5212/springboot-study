@@ -1,22 +1,32 @@
 package com.spring.cj.springstudy.web;
 
-import com.spring.cj.springstudy.service.PostsService;
+import com.spring.cj.springstudy.config.auth.LoginUser;
+import com.spring.cj.springstudy.config.auth.dto.SessionUser;
+import com.spring.cj.springstudy.web.service.PostsService;
 import com.spring.cj.springstudy.web.dto.PostsResponseDto;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import javax.servlet.http.HttpSession;
+
+@Slf4j
 @RequiredArgsConstructor
 @Controller
 public class IndexController {
 
     private final PostsService postsService;
+    private final HttpSession httpSession;
 
     @GetMapping("/")
-    public String index(Model model) {
+    public String index(Model model, @LoginUser SessionUser user) {
         model.addAttribute("posts", postsService.findAllDesc());
+        if (user != null) {
+            model.addAttribute("user_name", user.getName());
+        }
         return "index";
     }
 
