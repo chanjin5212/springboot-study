@@ -1,6 +1,6 @@
 package com.spring.cj.springstudy.web;
 
-import com.spring.cj.springstudy.web.service.PostsService;
+import com.spring.cj.springstudy.service.PostsService;
 import com.spring.cj.springstudy.web.dto.PostsResponseDto;
 import com.spring.cj.springstudy.web.dto.PostsSaveRequestDto;
 import com.spring.cj.springstudy.web.dto.PostsUpdateRequestDto;

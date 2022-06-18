@@ -2,7 +2,7 @@ package com.spring.cj.springstudy.web;
 
 import com.spring.cj.springstudy.config.auth.LoginUser;
 import com.spring.cj.springstudy.config.auth.dto.SessionUser;
-import com.spring.cj.springstudy.web.service.PostsService;
+import com.spring.cj.springstudy.service.PostsService;
 import com.spring.cj.springstudy.web.dto.PostsResponseDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

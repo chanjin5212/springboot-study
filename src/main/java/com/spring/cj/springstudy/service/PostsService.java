@@ -1,4 +1,4 @@
-package com.spring.cj.springstudy.web.service;
+package com.spring.cj.springstudy.service;
 
 import com.spring.cj.springstudy.domain.posts.Posts;
 import com.spring.cj.springstudy.domain.posts.PostsRepository;
