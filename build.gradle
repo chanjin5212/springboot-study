@@ -5,8 +5,8 @@ plugins { // (1)
 }
 
 group = 'com.spring.cj'
-version '1.0.4-SNAPSHOT-'+new Date().format("yyyyMMddHHmmss")
-sourceCompatibility = 1.8
+version '1.0.1-SNAPSHOT-'+new Date().format("yyyyMMddHHmmss")
+sourceCompatibility = '11'
 
 repositories {
     mavenCentral()
